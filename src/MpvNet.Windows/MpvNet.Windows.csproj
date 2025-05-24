@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
-		<TargetFramework>net9.0-windows</TargetFramework>
+		<TargetFramework>net8.0-windows7.0</TargetFramework>
 		<RootNamespace>MpvNet.Windows</RootNamespace>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<PublishSingleFile>true</PublishSingleFile>
@@ -40,8 +40,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="AntdUI" />
 		<PackageReference Include="CommunityToolkit.Mvvm" />
+		<PackageReference Include="Flurl.Http" />
+		<PackageReference Include="Mapster" />
 		<PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" />
+		<PackageReference Include="SqlSugarCore" />
 	</ItemGroup>
 
 </Project>

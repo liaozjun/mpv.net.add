@@ -8,7 +8,7 @@ public static class InputHelp
     public static List<Binding> GetDefaults()
     {
         List<Binding> b = new();
-
+        Add(b, new("", _("资源")));
         Add(b, new("", "", "script-binding select/select-playlist", "g-p", _("Playlist")));
         Add(b, new("", "", "script-binding select/select-sid", "g-s", _("Subtitles")));
         Add(b, new("", "", "script-binding select/select-secondary-sid", "g-S", _("Secondary Subtitles")));

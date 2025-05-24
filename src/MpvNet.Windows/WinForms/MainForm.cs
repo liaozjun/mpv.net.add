@@ -19,6 +19,7 @@ using CommunityToolkit.Mvvm.Messaging;
 
 using static MpvNet.Windows.Native.WinApi;
 using static MpvNet.Windows.Help.WinApiHelp;
+using MpvNet.Windows.WinForms.AddResource;
 
 namespace MpvNet.Windows.WinForms;
 
@@ -862,8 +863,17 @@ public partial class MainForm : Form
                             MenuAutoResetEvent.WaitOne();
                             System.Windows.Application.Current.Dispatcher.Invoke(
                                 DispatcherPriority.Background, new Action(delegate { }));
-                            if (!string.IsNullOrEmpty(tempBinding.Command))
-                                Player.Command(tempBinding.Command);                
+
+                            if (tempBinding.Comment == "资源")
+                            {
+                                ResourceForm rForm = new ResourceForm();
+                                rForm.ShowDialog();
+                            }
+                            else
+                            {
+                                if (!string.IsNullOrEmpty(tempBinding.Command))
+                                    Player.Command(tempBinding.Command);
+                            }
                         });
                     }
                     catch (Exception ex) {
