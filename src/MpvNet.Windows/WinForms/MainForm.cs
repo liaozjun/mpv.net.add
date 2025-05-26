@@ -20,6 +20,7 @@ using CommunityToolkit.Mvvm.Messaging;
 using static MpvNet.Windows.Native.WinApi;
 using static MpvNet.Windows.Help.WinApiHelp;
 using MpvNet.Windows.WinForms.AddResource;
+using MpvNet.Windows.Helper;
 
 namespace MpvNet.Windows.WinForms;
 
@@ -54,6 +55,7 @@ public partial class MainForm : Form
 
         try
         {
+            DbHelper.init();
             Instance = this;
 
             Player.FileLoaded += Player_FileLoaded;
