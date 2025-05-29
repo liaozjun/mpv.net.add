@@ -12,7 +12,7 @@ The player is based on the popular [mpv](https://mpv.io) media player.
 mpv.net is designed to be mpv compatible, almost all mpv features are available,
 this means the official [mpv manual](https://mpv.io/manual/master/) applies to mpv.net,
 differences are documented in the [mpv.net manual](docs/manual.md#differences-compared-to-mpv).
-
+🍉增加了媒体其他一样.
 
 
 Screenshots
