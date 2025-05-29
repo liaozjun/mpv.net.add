@@ -866,7 +866,7 @@ public partial class MainForm : Form
                             System.Windows.Application.Current.Dispatcher.Invoke(
                                 DispatcherPriority.Background, new Action(delegate { }));
 
-                            if (tempBinding.Comment == "资源")
+                            if (tempBinding.Comment == "媒体")
                             {
                                 ResourceForm rForm = new ResourceForm();
                                 rForm.ShowDialog();

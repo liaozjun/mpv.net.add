@@ -40,7 +40,23 @@ namespace MpvNet.Windows.WinForms.AddResource
             //worker.WorkerSupportsCancellation = true;
             //worker.ProgressChanged += Worker_ProgressChanged;
             //worker.WorkerReportsProgress = true;
-            this.pagination1.ValueChanged += Pagination1_ValueChanged; ;
+            this.pagination1.ValueChanged += Pagination1_ValueChanged;
+            this.FormClosing += ResourceForm_FormClosing;
+            
+        }
+
+        private void ResourceForm_FormClosing(object? sender, FormClosingEventArgs e)
+        {
+            if (btnGet.Loading)
+            {
+                e.Cancel = true;
+                MessageBox.Show("媒体获取中...稍后再关闭");
+            }
+        }
+
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        { 
+            base.OnFormClosed(e);
         }
 
         private void Pagination1_ValueChanged(object sender, PagePageEventArgs e)
