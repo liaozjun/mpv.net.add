@@ -135,6 +135,7 @@
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
